@@ -9,16 +9,21 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header">
             <nav>
-                <ul>
-                    <li><a href="#contacts">Contacts</a></li>
-                    <li><a href="#about_myself">About myself</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#languages">Languages</a></li>
-                    <li><a href="#hobby">Hobby</a></li>
-                </ul>
+                <input id="menu_toggle" type="checkbox" />
+    <label class="menu_btn" for="menu_toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu_box">
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#about_myself">About myself</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#hobby">Hobby</a></li>
+    </ul>
             </nav>
         </div>
     </header>
@@ -90,7 +95,10 @@
     </main>
     <footer>
         <div class="container">
-            <div>&copy; 2022 <a href="https://github.com/pashik01">pashik01</a></div>
+            <div class="footer">
+                <div>&copy; 2022 <a href="https://github.com/pashik01" class="footer_github">pashik01</a></div>
+                <div class="footer_rs_school"><a href="https://rs.school/js/"><img src="images/rs_school_js.svg" alt="rs school"></a></div>
+            </div>
         </div>
     </footer>
 </body>
