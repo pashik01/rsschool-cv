@@ -3,7 +3,7 @@ html{
     scroll-behavior: smooth;
   }
 body{
-    margin: 0;
+    margin: 0 auto;
     color:#000053;
     font-family: OpenSans;
     background-color: #fffff1;
@@ -80,6 +80,12 @@ ul li{list-style-type: none}
 .section_about li a:hover{
     color:#0000b3;
     transition: .3s;
+}
+#code pre{margin: 0;}
+#code code{
+    font-size: 20px;
+    font-family: OpenSans;
+    line-height: 30px;
 }
 .footer{
     display: flex;
