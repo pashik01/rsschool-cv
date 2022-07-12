@@ -116,7 +116,7 @@ border-radius: 10px;
 
 .preview{
   text-align: start;
-  background: url(../img/garrett-parker.jpg);
+  background: url(../img/garrett-parker.jpg) center;
   height: 765px;
   background-repeat: no-repeat;
   background-size: cover;
