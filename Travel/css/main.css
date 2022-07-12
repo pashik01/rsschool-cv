@@ -65,21 +65,26 @@ section{
 .logo img {
   margin-right: 6px;
 }
-nav{
-  color: #fff;
-line-height: 21px;
+.logo p{  font-family: 'Magra';
+  display: inline-block;
+  font-size: 32px;}
+#menu_toggle {display: none;}
 
-}
-.menu a{
+.menu_box a{
   display: block;
   padding: 35px 42px 34px 0;
   color: white;
 }
-.menu a:hover{
+.menu_box a:hover{
   color: #0D606F;
   transition: .3s;
 }
+.menu_box .menu_item{
+  display: none;
+}
 nav{
+  display: flex;
+  align-items: center;
   max-height: 0;
   transition: max-height .5s ease-out;
 }
@@ -97,72 +102,18 @@ border-radius: 10px;
   color: #0D606F;
   transition: .3s;
 }
-.hamb{
-  cursor: pointer;
-  float: right;
-  padding: 40px 20px;
-}/* Style label tag */
-
-.hamb-line {
-  background: var(--white);
-  display: block;
-  height: 2px;
-  position: relative;
-  width: 24px;
-
-} /* Style span tag */
-
-.hamb-line::before,
-.hamb-line::after{
-  background: var(--white);
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-.hamb-line::before{
-  top: 5px;
-}
-.hamb-line::after{
-  top: -5px;
-}
-
-.side-menu {
-  display: none;
-}
-.side-menu:checked ~ nav{
-  max-height: 100%;
-}
-.side-menu:checked ~ .hamb .hamb-line {
-  background: transparent;
-}
-.side-menu:checked ~ .hamb .hamb-line::before {
-  transform: rotate(-45deg);
-  top:0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-  transform: rotate(45deg);
-  top:0;
-}
-@media (min-width: 768px) {
   nav{
       max-height: none;
       position: relative;
   }
-  .menu li{
+  .menu_box li{
       float: left;
   }
-  .menu a:hover{
+  .menu_box a:hover{
       background-color: transparent;
 
   }
 
-  .hamb{
-      display: none;
-  }
-}
 .preview{
   text-align: start;
   background: url(../img/garrett-parker.jpg);
@@ -260,11 +211,20 @@ color: #0D606F;
   margin-bottom: 24px;
   height: 800px;
 }
+.destinations_img1{
+  background: url(../img/Spain.jpg);
+}
+.destinations_img2{
+  background: url(../img/Japan.jpg);
+}
+.destinations_img3{
+  background: url(../img/Usa.jpg);
+}
 .destinations_inner{
   margin: 0 30px;
-}
-.destinations_inner img{
   border-radius: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .destinations_inner p {
 position: relative;
@@ -275,7 +235,8 @@ font-size: 32px;
 color: #FFFFFF;
 text-align: start;
 left: 15px;
-bottom: 87px;
+top: 717px;
+width: 800px;
 }
 .destinations_dots{
   text-align: center;
@@ -293,6 +254,9 @@ bottom: 87px;
   opacity: 1;
   margin-right: 6px;
   margin-left: 6px;
+}
+.destinations_arrow{
+  display: none;
 }
 .destinations button, .stories button{
   font-size: 24px;
@@ -328,6 +292,7 @@ bottom: 87px;
   color: #0D606F;
   margin-bottom: 30px;
 }
+.stories_img2{display: none;}
 .stories_inner img{
   filter: drop-shadow(0px 4px 4px #0D606F);
 border-radius: 16px;
@@ -348,6 +313,10 @@ font-size: 20px;
   color: #0D606F;
 text-decoration: underline;
 font-weight: 700;
+  }
+  .stories_inner a:hover{
+    color: #F2785C;
+    transition: .3s;
   }
 .stories button {
   margin-top: 10px;
@@ -377,4 +346,402 @@ font-weight: 700;
   display: inline-block;
   margin-left: 20px;
   width: 30px;
+}
+@media (max-width: 1440px) {
+.header{
+  display: block;
+  padding: 0 15px;
+  width: 100%;
+}
+.logo {
+  padding: 0;
+}
+nav {
+  justify-content: space-between;
+}
+.header button {
+  margin-left: 0;
+}
+.preview_form {
+  width: 832px;
+}
+.preview_form input {
+  width: 500px;
+}
+  
+  .stories_wrap {
+    padding: 0px 15px 20px;
+  }
+  .stories_inner p {
+    font-size: 16px;
+  }
+  .stories_background {
+    height: 1272px;
+  }
+}
+@media (max-width: 1050px) {
+  .header{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .logo p{
+    display: none;
+  }
+  h1 {
+    font-size: 40px;
+    width: auto;
+  }
+  .preview {
+    background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%), url(../img/garrett-parker.jpg) top center;
+    padding-left: 15px;
+    height: 590px;
+  }
+  .preview_form {
+    width: auto;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 9px;
+  }
+  .preview_form button{
+    font-size: 11px;
+    padding: 8px 9px;
+    margin: 9px 0;
+  }
+  .preview_form input {
+    width: auto;
+    font-size: 14px;
+    margin: 0;
+    padding-left: 16px;
+  }
+  h2, .destinations h2  {
+    margin: 20px;
+    font-size: 14px;
+    line-height: normal;
+  }
+  .steps_wrap {
+    justify-content: space-around;
+    padding: 0 15px;
+  }
+  .steps_inner1, .steps_inner2 {
+    margin-right: 0;
+  }
+  .steps_inner1 {
+    width: 74px;
+    text-align: start;
+  }
+  .steps_inner2 {
+    width: 119px;
+  }
+  .steps_inner3 {
+    width: 81px;
+    text-align: end;
+  }
+  .steps_wrap p {
+    font-size: 10px;
+  }
+  .steps_wrap img {
+    width: 70px;
+    margin-bottom: 17px;
+  }
+  .steps_inner1 img {
+    padding: 19px 17px;
+  }
+  .steps_inner2 img {
+    padding: 18px 17px;
+    margin-bottom: 15px;
+  }
+  .steps_inner2 p{
+    text-align: end;
+  }
+  .steps_inner3 img {
+    padding: 20px 15px;
+  }
+  .destinations_wrap {
+    margin-bottom: 0;
+    height: 390px;
+
+  }
+  .destinations_dots {
+    position: relative;
+    bottom: 35px;
+    margin-bottom: 0px;
+  }
+  .destinations_inner p {
+    font-size: 20px;
+    bottom: 395px;
+    width: 375px;
+    top: 10px;
+  }
+  .destinations button, .stories button {
+    font-size: 11px;
+    padding: 8px 12px;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+  }
+  .destinations button img, .stories button img {
+    margin-right: 6px;
+    top: 0px;
+    width: 11px;
+  }
+  .stories_background {
+    height: 700px;
+  }
+  .stories_inner {
+    margin-bottom: 15px;
+  }
+  .stories_inner img {
+    width: 155px;
+    height: 130px;
+    margin-right: 10px;
+  }
+  .stories_inner h3 {
+    font-weight: 700;
+    font-size: 11px;
+    padding-bottom: 10px;
+  }
+  .stories_inner p {
+    font-size: 9px;
+    font-weight: 400;
+    text-overflow: clip;
+    overflow: hidden;
+    height: 79px;
+  }
+.stories_inner a {
+    font-size: 9px;
+}
+.footer_wrap {
+  justify-content: center;
+  padding-right: 0;
+}
+.footer_text {
+  display: none;
+}
+}
+@media (max-width: 768px) {
+  .menu_box a {
+    padding: 24px 5px;
+  }
+  nav, button {
+    font-size: 9.5px;
+  }
+  .header button {
+    padding: 10px 10px;
+  }
+}
+@media (max-width: 390px) {
+  .header{background-color: transparent;
+    width: 100%;
+    box-shadow: none;
+    opacity: 1;
+  }
+  nav {
+    width: 100%;
+  }
+  .header button {
+    display: none;
+  }
+    #menu_toggle {position: absolute;
+      opacity: 0;
+    }
+    #menu_toggle:checked ~ .menu_btn > span {
+      transform: rotate(45deg);
+      right: 107px;
+      top: -24px;
+      width: 20px;
+    }
+    #menu_toggle:checked ~ .menu_btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    #menu_toggle:checked ~ .menu_btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu_toggle:checked ~ .menu_box {
+      position: absolute;
+      visibility: visible;
+      right: -15px;
+      transition: .25s;
+    }
+    .menu_btn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 46px;
+      right: -15px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+      margin-right: 25px;
+    }
+    
+    .menu_btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition-duration: .5s;
+    }
+    .menu_btn > span::before {
+      content: '';
+      top: -7px;
+    }
+    .menu_btn > span::after {
+      content: '';
+      top: 7px;
+    }
+    .menu_box {
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      visibility: hidden;
+      top: 0px;
+      width: 165px;
+      height: auto;
+      margin: 0;
+      padding: 39px 0 25px;
+      background-color: #F2785C;
+      border-radius: 10px;
+      box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+      right: -50%;
+      transition: .25s;
+    }
+    .menu_box li a {
+      padding: 5px 15px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: right;
+    }
+    .menu_box .menu_item{
+      display: block;
+    }
+    .menu_box li a:hover {
+      background-color: #E5E5E5;
+    }
+    .logo {
+      padding: 45px 0 0;
+    }
+
+  h1, .preview p {
+    display: none;
+  }
+  .preview {
+    background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%), url(../img/garrett-parker2.jpg) top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 251px;
+    padding-top: 142px;
+    position: relative;
+    z-index: -1;
+  }
+  .preview_form input {
+    width: 183px;
+  }
+  .steps_wrap {
+    justify-content: space-between;
+  }
+  .destinations_wrap {
+    height: 211px;
+  }
+  .destinations_wrap {
+    justify-content: start;
+  }
+  .destinations_img1{
+    background: url(../img/Spain2.jpg) center;
+  }
+  .destinations_img2{
+    background: url(../img/Japan2.jpg) center;
+  }
+  .destinations_img3{
+    background: url(../img/Usa2.jpg) center;
+  }
+  .destinations_inner {
+    margin: 0 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .destinations_inner p {
+    width: 360px;
+  }
+  .destinations_dots {
+    bottom: 25px;
+  }
+  .destinations_dot {
+    width: 8px;
+    height: 8px;
+  }
+  .destinations_dots div:nth-child(2) {
+    opacity: .5;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  .destinations_dots div:nth-child(1) {
+    opacity: 1;
+  }
+  .destinations_dots {
+    margin-bottom: -26px;
+  }
+  .destinations_arrow{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    bottom: 106px;
+  }
+  .destinations_arrowleft, .destinations_arrowright {
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #F2785C;
+    border-right: 3px solid #F2785C;
+    opacity: .5;
+    transition: .3s;
+  }
+  .destinations_arrowleft:hover, .destinations_arrowright:hover{
+    opacity: 1;
+  }
+  .destinations_arrowleft{
+    transform: rotate(225deg);
+  } 
+  .destinations_arrowright{
+    transform: rotate(45deg);
+  }
+.stories h2{
+  margin-bottom: 10px;
+}
+.stories_background {
+  background: url(../img/Rectangle2.jpg);
+  height: 693px;
+}
+.stories_wrap {
+  padding: 10px 15px 13px;
+}
+.stories_inner h3 {
+  padding-top: 6px;
+}
+.stories button{
+  margin: -4px 0 0 0;
+}
+.stories_img{display: none;}
+.stories_img2{display: block;}
+.stories_wrap .stories_inner:last-child {
+  margin-bottom: 10px;
+}
+.footer_icons ul li:first-child{margin-left: 2px;}
+}
+@media (max-width: 380px) {
+  .destinations_wrap {
+    justify-content: center;
+  }
+  .destinations_inner p {
+    width: 300px;
+  }
+  .stories_inner p {height: 67px;}
+
 }
